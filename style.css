@@ -119,7 +119,7 @@ p {
 
 .logo-principal {
     max-width: 300px;
-    margin-bottom: 30px; /* MODIFICADO: Adiciona espaço abaixo do logo */
+    margin-bottom: 60px; /* MODIFICADO: Adiciona espaço abaixo do logo */
 }
 
 .slide-image {
@@ -362,3 +362,4 @@ p.destaque {
     }
 
 }
+
