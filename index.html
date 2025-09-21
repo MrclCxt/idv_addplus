@@ -188,18 +188,19 @@
             <div class="content">
                 <h2>5. Aplicações da Marca</h2>
                 <p>A identidade visual foi projetada para ser escalável e funcionar em todos os canais. Os pontos de contato prioritários são: <strong>redes sociais, site, uniformes e materiais impressos</strong>.</p>
+                
                 <div class="mockup-grid">
-                    <div class="mockup-item">
+                    <div class="mockup-item" data-gallery="digital">
                         <img src="img/mockup-digital.png" alt="Mockup da marca em aplicação digital">
                         <h4>Digital</h4>
                         <p>Destaque em avatares, banners de sites e apresentações.</p>
                     </div>
-                    <div class="mockup-item">
+                    <div class="mockup-item" data-gallery="uniformes">
                         <img src="img/mockup-uniformes.png" alt="Mockup da marca em uniformes">
                         <h4>Uniformes</h4>
                         <p>Aplicação monocromática para sobriedade e profissionalismo.</p>
                     </div>
-                    <div class="mockup-item">
+                    <div class="mockup-item" data-gallery="impressos">
                         <img src="img/mockup-impressos.png" alt="Mockup da marca em materiais impressos">
                         <h4>Materiais Impressos</h4>
                         <p>Alto impacto visual que transmite confiança e inovação.</p>
@@ -216,6 +217,16 @@
         </section>
 
     </main>
+
+    <div id="gallery-modal" class="modal">
+        <span class="close-button">&times;</span>
+        <img class="modal-content" id="modal-image">
+        <div class="navigation">
+            <a class="prev">&#10094;</a>
+            <a class="next">&#10095;</a>
+        </div>
+        <div id="caption"></div>
+    </div>
 
     <script src="script.js"></script>
 </body>
