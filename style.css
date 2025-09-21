@@ -1,0 +1,363 @@
+/* MODIFICADO: Paleta de cores principal foi atualizada */
+:root {
+    --cor-primaria: #00ff66;
+    --cor-secundaria: #1c241c;
+    --branco: #ffffff;
+    --preto: #000000;
+    --font-titulo: 'Montserrat', sans-serif;
+    --font-texto: 'Roboto', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-texto);
+    background-color: var(--cor-secundaria);
+    color: var(--branco);
+    overflow-x: hidden;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 50px;
+    background-color: rgba(28, 36, 28, 0.8); /* Cor secundária com transparência */
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 40px;
+    width: auto;
+    display: block;
+}
+
+.slide {
+    min-height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 120px 50px 50px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.slide.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.content {
+    max-width: 960px;
+    width: 100%;
+    text-align: center;
+}
+
+h1 {
+    font-family: var(--font-titulo);
+    font-size: 6em;
+    color: var(--branco); 
+    margin-top: 30px;
+    margin-bottom: 0;
+}
+
+.plus-verde {
+    color: var(--cor-primaria);
+}
+
+h2 {
+    font-family: var(--font-titulo);
+    font-size: 2.5em;
+    color: var(--branco);
+    margin-bottom: 30px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--cor-primaria);
+    display: inline-block;
+}
+
+h3 {
+    font-family: var(--font-titulo);
+    font-size: 1.8em;
+    color: var(--cor-primaria);
+    margin-top: 20px;
+    margin-bottom: 15px;
+}
+
+h4 {
+    font-family: var(--font-titulo);
+    font-size: 1.2em;
+    color: var(--branco);
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    color: var(--branco); /* Alterado de cinza para branco para melhor contraste */
+    text-align: left;
+}
+
+.content > p {
+    text-align: center;
+}
+
+.logo-principal {
+    max-width: 300px;
+    margin-bottom: 0; 
+}
+
+.slide-image {
+    max-width: 100%;
+    border-radius: 8px;
+    margin-top: 30px;
+}
+
+/* --- GRIDS E LAYOUTS ESPECÍFICOS --- */
+.essencia-grid,
+.personalidade-grid,
+.logo-conceito-grid {
+    display: grid;
+    gap: 30px;
+    margin-top: 40px;
+    text-align: left;
+}
+
+.essencia-grid, .logo-conceito-grid {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.personalidade-grid {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.essencia-grid h3,
+.personalidade-grid h4,
+.logo-conceito-grid h4 {
+    border-left: 3px solid var(--cor-primaria);
+    padding-left: 15px;
+}
+
+.essencia-grid > div,
+.personalidade-grid > div,
+.logo-conceito-grid > div {
+    background-color: rgba(255, 255, 255, 0.03);
+    padding: 20px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+}
+
+p.destaque {
+    font-size: 1.3em;
+    font-weight: 500;
+    background-color: rgba(0, 255, 102, 0.1); /* Cor primária com transparência */
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    margin: 30px 0;
+}
+
+
+/* --- SEÇÃO DE ARQUITETURA DE MARCA --- */
+.arquitetura-lista {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 40px;
+    align-items: center;
+}
+
+.solucao-item {
+    margin: 0;
+    width: 150px;
+}
+
+.solucao-item img {
+    width: 100%;
+    height: auto; 
+    border-radius: 12px; 
+    border: 2px solid var(--cor-primaria);
+    background-color: var(--cor-secundaria);
+    padding: 5px;
+    transition: transform 0.3s ease;
+    display: block;
+}
+
+.solucao-item img:hover {
+    transform: scale(1.05);
+}
+
+
+/* --- VARIAÇÕES DO LOGO --- */
+.logo-variations {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.logo-variations figure {
+    text-align: center;
+    max-width: 100%;
+}
+
+.logo-variations img {
+    max-width: 100%;
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+    padding: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.logo-variations figcaption {
+    margin-top: 15px;
+    font-size: 1em;
+    color: var(--branco);
+    font-style: italic;
+}
+
+.color-palette {
+    display: grid;
+    gap: 20px;
+    margin-top: 40px;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.color-card {
+    padding: 25px;
+    border-radius: 8px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+}
+.color-card h3 {
+    color: inherit;
+    border-bottom: 2px solid;
+    margin-top: 0;
+}
+.color-card p {
+    font-size: 1em;
+    color: inherit;
+}
+.color-card .justificativa {
+    font-size: 0.9em;
+    margin-top: auto;
+    padding-top: 15px;
+    opacity: 0.9;
+}
+
+.typography-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    text-align: left;
+    margin-top: 40px;
+}
+.font-display-title {
+    font-family: var(--font-titulo);
+}
+.font-example-title {
+    font-family: var(--font-titulo);
+    font-size: 2em;
+    font-weight: 700;
+    color: var(--cor-primaria);
+    word-wrap: break-word;
+}
+.font-example-body {
+    font-family: var(--font-texto);
+    font-size: 1.2em;
+    word-wrap: break-word;
+}
+
+.mockup-grid {
+    display: grid;
+    gap: 20px;
+    margin-top: 40px;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.mockup-item {
+    background-color: var(--preto); /* Alterado para usar o preto de apoio */
+    border-radius: 8px;
+    overflow: hidden;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+}
+.mockup-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+.mockup-item h4, .mockup-item p {
+    padding: 0 15px;
+}
+.mockup-item h4 {
+    margin-top: 15px;
+    color: var(--cor-primaria);
+}
+.mockup-item p {
+    font-size: 0.9em;
+    padding-bottom: 15px;
+    margin-top: auto;
+}
+
+#encerramento h3 {
+    border: none;
+    font-size: 2em;
+    color: var(--branco);
+}
+
+/* --- RESPONSIVIDADE --- */
+@media (max-width: 960px) {
+    .mockup-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+@media (max-width: 768px) {
+    h1 { font-size: 4em; }
+    h2 { font-size: 2em; }
+    .slide { padding: 100px 20px 40px; }
+    .typography-section { grid-template-columns: 1fr; }
+
+    .essencia-grid,
+    .logo-conceito-grid,
+    .personalidade-grid,
+    .color-palette {
+        grid-template-columns: 1fr;
+    }
+    
+    .mockup-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 500px) {
+    .arquitetura-lista {
+        gap: 20px;
+    }
+    .solucao-item {
+        width: 120px;
+    }
+    .solucao-item img {
+        height: auto;
+    }
+}
