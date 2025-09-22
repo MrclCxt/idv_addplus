@@ -348,6 +348,13 @@ p.destaque {
     .mockup-grid {
         grid-template-columns: 1fr;
     }
+
+    #capa h2 {
+        font-size: 1.8em;
+        border-bottom: none;
+        padding-bottom: 0;
+        margin-bottom: 15px;
+    }
 }
 
 @media (max-width: 500px) {
