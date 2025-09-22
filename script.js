@@ -80,6 +80,8 @@ document.addEventListener('DOMContentLoaded', () => {
         updateModalContent();
     }
 
+
+
     function showPrevImage() {
         currentIndex = (currentIndex - 1 + currentGallery.length) % currentGallery.length;
         updateModalContent();
